@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    APi
+                    XUAN
                 </div>
 
                 <div class="links">
