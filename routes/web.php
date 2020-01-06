@@ -31,3 +31,7 @@ Route::get('/test/reg','TestController@reg');
 Route::post('/api/usr/reg','Api\LoginController@reg');
 Route::post('/api/usr/login','Api\LoginController@login');
 Route::get('login/list','Api\LoginController@userList')->middleware('login');
+
+
+Route::get('/caesar','Kaoshi\KaoshiController@caesar');
+Route::get('/jcaesar','Kaoshi\KaoshiController@jcaesar');
