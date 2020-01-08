@@ -33,5 +33,8 @@ Route::post('/api/usr/login','Api\LoginController@login');
 Route::get('login/list','Api\LoginController@userList')->middleware('login');
 
 
-Route::get('/caesar','Kaoshi\KaoshiController@caesar');
-Route::get('/jcaesar','Kaoshi\KaoshiController@jcaesar');
+Route::get('/caesar','Kaoshi\KaoshiController@caesar');//加密
+Route::get('/jcaesar','Kaoshi\KaoshiController@jcaesar');//解密
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
