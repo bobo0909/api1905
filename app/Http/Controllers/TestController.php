@@ -114,5 +114,8 @@ class TestController extends Controller
 //             'last_ip' => $_SERVER['REMOTE_ADDR'];
 //         ];
 //     }
-
+    public function postman1()
+    {
+            echo "123";
+    }
 }

@@ -28,6 +28,10 @@ Route::post('/test/alipay/notify','Alipay\PayController@notify');
 
 //登录注册
 Route::get('/test/reg','TestController@reg');
+	
+Route::get('/test/postman1','TestController@postman1s');
+
+
 Route::post('/api/usr/reg','Api\LoginController@reg');
 Route::post('/api/usr/login','Api\LoginController@login');
 Route::get('login/list','Api\LoginController@userList')->middleware('login');
@@ -38,3 +42,6 @@ Route::get('/jcaesar','Kaoshi\KaoshiController@jcaesar');//解密
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('login/list','Api\LoginController@userList')->middleware('checktoken','login');
+Route::get('/login/qm','Api\LoginController@qm');

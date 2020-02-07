@@ -75,8 +75,43 @@ class LoginController extends Controller
         }
         return $response;
     }
+    // public function userList()
+    // {
+    //     echo "1111";
+    // }
+
+    // public function postman1()
+    // {
+    //         echo "123";
+    // }
     public function userList()
     {
-        echo "1111";
+        $data = [
+            'name' => '123',
+            'tel'     => '17603598188',
+        ];
+        echo '<pre>';print_r($data);echo'</pre>';
+
     }
-}
+    public function qm(){
+
+        $data="hello";
+        $key="bobo";
+
+        //生成签名
+        $signature=md5($data.$key);
+
+        echo "待发送的数据：". $data;echo '</br>';
+        echo "签名：". $signature;echo '</br>';
+
+        //发送数据
+        $url = "http://1905passport.com/login/yq?data=".$data .'&signature='.$signature;
+//        $url = "http://1905passport.com/yq?data=".$data .'&signature='.$signature;
+        echo $url;echo '<hr>';
+
+        $response = file_get_contents($url);
+        echo $response;
+
+        
+    }
+   }
