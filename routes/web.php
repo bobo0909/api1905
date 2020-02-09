@@ -45,3 +45,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('login/list','Api\LoginController@userList')->middleware('checktoken','login');
 Route::get('/login/qm','Api\LoginController@qm');
+Route::get('/login/encrypt2','Api\LoginController@encrypt2');  //对称加密
+Route::get('/login/encrypt','Api\LoginController@encrypt');  //非对称加密
